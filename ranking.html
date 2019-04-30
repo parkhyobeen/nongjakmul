@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>SIGN IN</title>
+
+  <link rel="stylesheet" type="text/css" href="../materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://npmcdn.com/parse@2.1.0/dist/parse.js"></script>
+
+
+ 
+</head>
+
+<body>
+	<div class="container">
+     <ul class="collection with-header col s3">
+      <li class="collection-header"><h4>방문한사람</h4></li>
+     </ul>
+     <ol id="addli" class="collection with-header col s3">
+     </ol>
+  </div>
+	
+	<script type="text/javascript">
+        Parse.initialize("박효빈");
+        Parse.serverURL="https://hyoserver.herokuapp.com/parse"
+
+        var User = Parse.Object.extend("User");
+        var query = new Parse.Query(User);
+        query.ascending("username");
+        query.find()
+        .then(function(results) {
+           
+               result.get("User")
+       
+      
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8">
+
+ 	<title>농작물 로그인</title>
+ 	
+ 	<link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+ 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+ 	<script src="https://npmcdn.com/parse@2.1.0/dist/parse.min.js"></script>
+
+ </head>
+
+ <body>
+ 	<div id="login">
+ 		<input type="text" id="id">
+ 		<input type="text" id="password">
+ 		<input type="button" value="SINGIN" onclick="signin()">
+ 		<input type="button" value="SIGNUP" onclick="singup()">
+ 	</div>
+ 	<script type="text/javascript">
+ 		Parse.initialize("박효빈");
+ 		Parse.serverURL= 'https://hyoserver.herokuapp.com/parse'
+
+ 		function signin(){
+ 			var id = $("#id").val();
+ 			var password = $("#password").val();
+
+ 			if(Parse.User.current()) {
+ 				Parse.User.logOut();
+ 			}
+
+ 			function button_onclick(){
+ 				var count = 0;
+		        count++;	
+		
+	}
+
+ 			Parse.User.logIn(id, password)
+ 			.then((user) => {
+ 				alert(" (*•̀ᴗ•́*)و ̑̑ 환영합니다 (*•̀ᴗ•́*)و ̑̑ ");
+ 				window.location = "농작물.html";
+ 			}, (error) => {
+ 				alert("login error : " + error.message);
+ 			});
+ 		}
+ 	
+ 		function singup(){
+ 			window.location = "signup.html";
+ 		}
+
+ 	</script>
+ </body>
+ </html>
+
+
+
+
+
+

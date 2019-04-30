@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<html lang="ko">
+
+	<title>생소한농작물 알아보기</title>
+	<meta name="description" content="My Parse App">
+	<meta name="viewport" content="width=device-width">
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://npmcdn.com/parse@2.1.0/dist/parse.min.js"></script>
+
+	<script>
+	 Parse.initialize("박효빈");
+        Parse.serverURL="https://hyoserver.herokuapp.com/parse";
+        
+        $(document).ready(function() {
+            if(!Parse.User.current()) {
+                alert("Please after Login");
+                window.location = "signin.html"
+            }
+        </script>
+
+<style>
+  
+    body {background-color: lightblue; color:purple; font-size: 100%; text-align:center;}
+    h1 {background-color: rgb(181,178,255);}
+</style>  컴퓨터소프트웨어학과 17100016 김예림,17100035 박효빈 
+
+</head>
+
+<body>
+
+	<div id="info" >
+        <span id="id"></span>
+        <input type="button" value="LOGOUT" onclick="logout()">
+    </div>
+    <div id="wrapper"></div>
+    <div id="endgame">
+        
+        <a href=ranking.html><input type="button" value="조회수" onclick="showRanking()">
+    </div>
+
+	<h1> *생소한농작물 백과사전* </h2>
+<div class="imgCollage">
+		 <a href=노니.html><img src="cho/노니.jpg" width="400" height="300" ></span>
+		 <a href=라디치오.html><img src="cho/라디치오.jpg" width="400" height="300"></span>
+		<a href=미니양배추.html><img src="cho/미니양배추.jpg" width="400" height="300"></span>
+		 <a href=아스파라거스.html><img src="cho/아스파라거스.png" width="400" height="300"></span>
+		 <a href=엔다이브.html><img src="cho/엔다이브.jpg" width="400" height="300"></span>
+		 <a href=콜라비.html><img src="cho/콜라비.png" width="400" height="300"></span>
+		 <a href=콜리플라워.html><img src="cho/콜리플라워.png" width="400" height="300"></span>
+		 <a href=펜넬.html><img src="cho/펜넬.jpeg" width="400" height="300"></span>
+	</div>
+
+	<p>한국에서 접해보기 생소하고 신기한 농산물들을 소개해드리겠습니다. </p>
+        <p>이미지를 클릭하시면 농산물에 대한 설명이 나옵니다. </p>
+        <br/>
+</body>
+
+</html>
+
+
